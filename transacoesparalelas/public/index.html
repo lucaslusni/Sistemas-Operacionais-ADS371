@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Detector de Transações Suspeitas</title>
+    <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+    <div class="container">
+        <h1>Detector de Transações Suspeitas</h1>
+        <p class="subtitle">
+            Comparação entre processamento sequencial e paralelo com 3 workers no Node.js
+        </p>
+
+        <div class="controls">
+            <label for="coin">Filtrar por coin:</label>
+            <select id="coin">
+        <option value="TODAS">Todas</option>
+        <option value="BTC">BTC</option>
+        <option value="ETH">ETH</option>
+        <option value="DOGE">DOGE</option>
+        <option value="SOL">SOL</option>
+      </select>
+
+            <button id="btnListar">Ver Transações</button>
+            <button id="btnSequencial">Analisar Sem Threads</button>
+            <button id="btnParalelo">Analisar Com Threads</button>
+        </div>
+
+        <div class="cards">
+            <div class="card">
+                <h2>Resumo</h2>
+                <div id="resumo">Nenhuma execução realizada ainda.</div>
+            </div>
+
+            <div class="card">
+                <h2>Resultados</h2>
+                <div id="resultado"></div>
+            </div>
+        </div>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+
+</html>
